@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuraLearn — AI Study Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Neura<span>Learn</span></a>
+  <a href="/explain">Explainer</a>
+  <a href="/mcq">MCQ Gen</a>
+  <a href="/summarize">Summarizer</a>
+  <a href="/quiz">Quiz Mode</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">Powered by LLaMA 3.3 · Groq AI</div>
+  <h1>Study Smarter<br>with <span class="c1">Neura</span><span class="c2">Learn</span></h1>
+  <p>Your AI-powered study companion — explain topics, generate MCQs, summarize notes, and test yourself with scored quizzes.</p>
+</div>
+
+<div class="cards">
+  <a href="/explain" class="card"
+     style="--ca: rgba(0,229,255,0.07); --ca-border: rgba(0,229,255,0.35);">
+    <span class="icon">💡</span>
+    <h3>Topic Explainer</h3>
+    <p>Get a clear, example-based explanation of any concept at your level.</p>
+  </a>
+  <a href="/mcq" class="card"
+     style="--ca: rgba(123,97,255,0.07); --ca-border: rgba(123,97,255,0.35);">
+    <span class="icon">📝</span>
+    <h3>MCQ Generator</h3>
+    <p>Generate practice MCQs on any subject for exam preparation.</p>
+  </a>
+  <a href="/summarize" class="card"
+     style="--ca: rgba(255,107,157,0.07); --ca-border: rgba(255,107,157,0.35);">
+    <span class="icon">📋</span>
+    <h3>Notes Summarizer</h3>
+    <p>Paste your notes and get a clean, concise bullet-point summary.</p>
+  </a>
+  <a href="/quiz" class="card"
+     style="--ca: rgba(0,255,163,0.07); --ca-border: rgba(0,255,163,0.35);">
+    <span class="icon">🎯</span>
+    <h3>Quiz Mode</h3>
+    <p>Test yourself with scored interactive quizzes on any topic.</p>
+  </a>
+</div>
+
+</body>
+</html>

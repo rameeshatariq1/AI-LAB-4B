@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes Summarizer — NeuraLearn</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Neura<span>Learn</span></a>
+  <a href="/explain">Explainer</a>
+  <a href="/mcq">MCQ Gen</a>
+  <a href="/summarize" class="active">Summarizer</a>
+  <a href="/quiz">Quiz Mode</a>
+</nav>
+
+<div class="page">
+  <div class="page-header">
+    <span class="tag" style="color: var(--accent3);">Feature 03</span>
+    <h1>Notes Summarizer</h1>
+    <p>Paste your lecture notes and get a clean, concise bullet-point summary.</p>
+  </div>
+
+  <div class="form-card">
+    <form method="POST">
+      <div class="form-group">
+        <label>Your Notes</label>
+        <textarea name="notes" placeholder="Paste your lecture notes, textbook content, or any text here..." required>{{ notes }}</textarea>
+      </div>
+      <button type="submit" class="btn pink">Summarize</button>
+    </form>
+  </div>
+
+  {% if result %}
+  <div class="result-box" style="border-left-color: var(--accent3);">
+    <div class="result-label" style="color: var(--accent3);">Summary</div>
+    <div class="result-content">{{ result }}</div>
+  </div>
+  {% endif %}
+</div>
+
+</body>
+</html>
